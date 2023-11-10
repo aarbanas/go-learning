@@ -3,7 +3,6 @@ package loops
 import "fmt"
 
 func CalculateFactorial() int {
-	// Write your code here
 	var inputNumber int
 	factorial := 1
 
