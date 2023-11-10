@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/aarbanas/go-learning/loops"
+	. "github.com/aarbanas/go-learning/loops"
 )
 
 func main() {
@@ -19,11 +19,11 @@ func main() {
 
 	switch commandValues {
 	case 1:
-		res := loops.Calculate()
+		res := CalculateFactorial()
 		fmt.Println(res)
 		break
 	case 2:
-		res := loops.Revers()
+		res := ReversNumbers()
 		fmt.Println(res)
 		break
 	default:
