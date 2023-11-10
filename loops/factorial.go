@@ -1,4 +1,4 @@
-package factorial
+package loops
 
 import "fmt"
 

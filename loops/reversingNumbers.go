@@ -1,4 +1,4 @@
-package reversingNumbers
+package loops
 
 import "fmt"
 

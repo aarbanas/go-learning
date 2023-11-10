@@ -3,8 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/aarbanas/go-learning/factorial"
-	"github.com/aarbanas/go-learning/reversingNumbers"
+	"github.com/aarbanas/go-learning/loops"
 )
 
 func main() {
@@ -20,11 +19,11 @@ func main() {
 
 	switch commandValues {
 	case 1:
-		res := factorial.Calculate()
+		res := loops.Calculate()
 		fmt.Println(res)
 		break
 	case 2:
-		res := reversingNumbers.Revers()
+		res := loops.Revers()
 		fmt.Println(res)
 		break
 	default:
