@@ -2,7 +2,7 @@ package loops
 
 import "fmt"
 
-func Revers() int {
+func ReversNumbers() int {
 	var inputNumber int
 	result := 0
 

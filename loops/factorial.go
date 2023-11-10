@@ -2,7 +2,7 @@ package loops
 
 import "fmt"
 
-func Calculate() int {
+func CalculateFactorial() int {
 	// Write your code here
 	var inputNumber int
 	factorial := 1
