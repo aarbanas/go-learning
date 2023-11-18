@@ -5,6 +5,7 @@ import (
 
 	. "github.com/aarbanas/go-learning/loops"
 	. "github.com/aarbanas/go-learning/slices"
+	. "github.com/aarbanas/go-learning/structs"
 )
 
 func main() {
@@ -15,6 +16,8 @@ func main() {
 	fmt.Println("1 -> Calculate factorial of provided number")
 	fmt.Println("2 -> Reverse numbers order of provided number")
 	fmt.Println("3 -> Append slice")
+	fmt.Println("4 -> Struct tags")
+
 	fmt.Println("*********************************")
 
 	fmt.Scan(&commandValues)
@@ -30,6 +33,10 @@ func main() {
 		break
 	case 3:
 		AppendSlice()
+		break
+	case 4:
+		ExecuteJsonEncoding()
+		break
 	default:
 		fmt.Println("Invalid value provided")
 	}
