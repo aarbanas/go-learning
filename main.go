@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	. "github.com/aarbanas/go-learning/conversion"
 	. "github.com/aarbanas/go-learning/loops"
 	. "github.com/aarbanas/go-learning/slices"
 	. "github.com/aarbanas/go-learning/structs"
@@ -17,6 +18,7 @@ func main() {
 	fmt.Println("2 -> Reverse numbers order of provided number")
 	fmt.Println("3 -> Append slice")
 	fmt.Println("4 -> Struct tags")
+	fmt.Println("5 -> Encryption")
 
 	fmt.Println("*********************************")
 
@@ -36,6 +38,9 @@ func main() {
 		break
 	case 4:
 		ExecuteJsonEncoding()
+		break
+	case 5:
+		Encrypt()
 		break
 	default:
 		fmt.Println("Invalid value provided")
