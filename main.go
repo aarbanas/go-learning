@@ -40,7 +40,17 @@ func main() {
 		ExecuteJsonEncoding()
 		break
 	case 5:
-		Encrypt()
+		var s string
+		shift := 5
+		fmt.Println("Enter text you wish to encrypt")
+		fmt.Scan(&s)
+
+		encryptedText := Encrypt(s, shift)
+		fmt.Println("Encrypted text: ", encryptedText)
+
+		decryptedText := Decrypt(encryptedText, shift)
+		fmt.Println("Decrypted text: ", decryptedText)
+
 		break
 	default:
 		fmt.Println("Invalid value provided")
