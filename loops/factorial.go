@@ -1,6 +1,10 @@
 package loops
 
-import "fmt"
+import (
+	"fmt"
+
+	. "github.com/aarbanas/go-learning/errors"
+)
 
 func CalculateFactorial() int {
 	var inputNumber int
@@ -9,7 +13,8 @@ func CalculateFactorial() int {
 	fmt.Println("Enter number:")
 	fmt.Scan(&inputNumber)
 	if inputNumber < 1 {
-		fmt.Println("Number must be bigger than 0")
+		err := NegativeNumError()
+		fmt.Println(err)
 		return 0
 	}
 
