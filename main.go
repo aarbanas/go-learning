@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	. "github.com/aarbanas/go-learning/conversion"
+	. "github.com/aarbanas/go-learning/errors"
 	. "github.com/aarbanas/go-learning/loops"
 	. "github.com/aarbanas/go-learning/slices"
 	. "github.com/aarbanas/go-learning/structs"
@@ -22,7 +23,11 @@ func main() {
 
 	fmt.Println("*********************************")
 
-	fmt.Scan(&commandValues)
+	_, err := fmt.Scan(&commandValues)
+	if err != nil {
+		ScanErrorMessage(err)
+		return
+	}
 
 	switch commandValues {
 	case 1:
@@ -43,7 +48,11 @@ func main() {
 		var s string
 		shift := 5
 		fmt.Println("Enter text you wish to encrypt")
-		fmt.Scan(&s)
+		_, err := fmt.Scan(&s)
+		if err != nil {
+			ScanErrorMessage(err)
+			return
+		}
 
 		encryptedText := Encrypt(s, shift)
 		fmt.Println("Encrypted text: ", encryptedText)

@@ -11,7 +11,12 @@ func CalculateFactorial() int {
 	factorial := 1
 
 	fmt.Println("Enter number:")
-	fmt.Scan(&inputNumber)
+	_, err := fmt.Scan(&inputNumber)
+	if err != nil {
+		ScanErrorMessage(err)
+		return 0
+	}
+
 	if inputNumber < 1 {
 		err := NegativeNumError()
 		fmt.Println(err)

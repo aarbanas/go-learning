@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"log"
 	"reflect"
+
+	. "github.com/aarbanas/go-learning/errors"
 )
 
 func solve(sl1, sl2 []int) []int {
@@ -15,16 +17,29 @@ func solve(sl1, sl2 []int) []int {
 func AppendSlice() {
 	var num1, num2 int
 	fmt.Println("Enter slices length (separate with white space)")
-	fmt.Scanln(&num1, &num2)
+	_, err := fmt.Scanln(&num1, &num2)
+	if err != nil {
+		ScanErrorMessage(err)
+		return
+	}
 
 	sl1, sl2 := make([]int, num1), make([]int, num2)
 
 	for i := range sl1 {
-		fmt.Scanln(&sl1[i])
+		_, err := fmt.Scanln(&sl1[i])
+		if err != nil {
+			ScanErrorMessage(err)
+			return
+		}
+
 	}
 
 	for i := range sl2 {
-		fmt.Scanln(&sl2[i])
+		_, err := fmt.Scanln(&sl2[i])
+		if err != nil {
+			ScanErrorMessage(err)
+			return
+		}
 	}
 
 	if !reflect.DeepEqual(append(sl1, sl2...), solve(sl1, sl2)) {

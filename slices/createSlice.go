@@ -1,10 +1,19 @@
 package slices
 
-import "fmt"
+import (
+	"fmt"
+
+	. "github.com/aarbanas/go-learning/errors"
+)
 
 func CreateSlice() {
 	var a, b, c int
-	fmt.Scanln(&a, &b, &c)
+
+	_, err := fmt.Scanln(&a, &b, &c)
+	if err != nil {
+		ScanErrorMessage(err)
+		return
+	}
 
 	// Create intSlice containing the a, b and c variables below:
 	intSlice := []int{a, b, c}
