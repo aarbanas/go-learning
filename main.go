@@ -6,6 +6,7 @@ import (
 	. "github.com/aarbanas/go-learning/conversion"
 	. "github.com/aarbanas/go-learning/errors"
 	. "github.com/aarbanas/go-learning/loops"
+	. "github.com/aarbanas/go-learning/maps"
 	. "github.com/aarbanas/go-learning/slices"
 	. "github.com/aarbanas/go-learning/structs"
 )
@@ -20,6 +21,7 @@ func main() {
 	fmt.Println("3 -> Append slice")
 	fmt.Println("4 -> Struct tags")
 	fmt.Println("5 -> Encryption")
+	fmt.Println("6 -> Maps")
 
 	fmt.Println("*********************************")
 
@@ -60,6 +62,16 @@ func main() {
 		decryptedText := Decrypt(encryptedText, shift)
 		fmt.Println("Decrypted text: ", decryptedText)
 
+		break
+	case 6:
+		var key string
+		_, err := fmt.Scanln(&key)
+		if err != nil {
+			ScanErrorMessage(err)
+			return
+		}
+
+		ExistsInMap(key)
 		break
 	default:
 		fmt.Println("Invalid value provided")
