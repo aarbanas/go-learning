@@ -7,6 +7,7 @@ import (
 	. "github.com/aarbanas/go-learning/errors"
 	. "github.com/aarbanas/go-learning/loops"
 	. "github.com/aarbanas/go-learning/maps"
+	. "github.com/aarbanas/go-learning/methods"
 	. "github.com/aarbanas/go-learning/slices"
 	. "github.com/aarbanas/go-learning/structs"
 )
@@ -22,6 +23,7 @@ func main() {
 	fmt.Println("4 -> Struct tags")
 	fmt.Println("5 -> Encryption")
 	fmt.Println("6 -> Maps")
+	fmt.Println("7 -> Methods")
 
 	fmt.Println("*********************************")
 
@@ -72,6 +74,9 @@ func main() {
 		}
 
 		ExistsInMap(key)
+		break
+	case 7:
+		MethodAction()
 		break
 	default:
 		fmt.Println("Invalid value provided")
