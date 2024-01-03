@@ -10,6 +10,7 @@ import (
 	. "github.com/aarbanas/go-learning/methods"
 	. "github.com/aarbanas/go-learning/slices"
 	. "github.com/aarbanas/go-learning/structs"
+	. "github.com/aarbanas/go-learning/time"
 )
 
 func main() {
@@ -24,6 +25,7 @@ func main() {
 	fmt.Println("5 -> Encryption")
 	fmt.Println("6 -> Maps")
 	fmt.Println("7 -> Methods")
+	fmt.Println("8 -> Time")
 
 	fmt.Println("*********************************")
 
@@ -77,6 +79,9 @@ func main() {
 		break
 	case 7:
 		MethodAction()
+		break
+	case 8:
+		CompareTime()
 		break
 	default:
 		fmt.Println("Invalid value provided")
