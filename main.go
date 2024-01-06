@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	. "github.com/aarbanas/go-learning/channels"
 	. "github.com/aarbanas/go-learning/conversion"
 	. "github.com/aarbanas/go-learning/errors"
 	. "github.com/aarbanas/go-learning/loops"
@@ -26,6 +27,7 @@ func main() {
 	fmt.Println("6 -> Maps")
 	fmt.Println("7 -> Methods")
 	fmt.Println("8 -> Time")
+	fmt.Println("9 -> Channels")
 
 	fmt.Println("*********************************")
 
@@ -82,6 +84,9 @@ func main() {
 		break
 	case 8:
 		CompareTime()
+		break
+	case 9:
+		RunConcurrentAttempts()
 		break
 	default:
 		fmt.Println("Invalid value provided")
