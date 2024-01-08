@@ -28,6 +28,7 @@ func main() {
 	fmt.Println("7 -> Methods")
 	fmt.Println("8 -> Time")
 	fmt.Println("9 -> Channels")
+	fmt.Println("10 -> Variadic function")
 
 	fmt.Println("*********************************")
 
@@ -87,6 +88,9 @@ func main() {
 		break
 	case 9:
 		RunConcurrentAttempts()
+		break
+	case 10:
+		VariadicFunctionAction()
 		break
 	default:
 		fmt.Println("Invalid value provided")
